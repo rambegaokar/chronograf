@@ -1,0 +1,101 @@
+{
+	"id": "a63385cc-e7f9-44f9-862e-8a53574e8b71",
+	"measurement": "ipmi_sensor",
+	"app": "ipmi",
+	"autoflow":true,
+			"cells": [
+	{
+		"x": 0,
+		"y": 0,
+		"w": 4,
+		"h": 4,
+		"i": "8dbc4d35-500f-4ede-9d6e-1334dde72fcc",
+		"name": "CPU2 - Mean Temperature",
+		"queries": [{
+			"query": "select mean(\"value\") as \"mean_temperature\" from \"ipmi_sensor\" ",
+			"groupbys": [],
+			"wheres":  [ "\"name\" = 'cpu2_temp'" ]
+				}]
+			},
+	{
+                "x": 0,
+                "y": 0,
+                "w": 4,
+                "h": 4,
+                "i": "8dbc4d35-500f-4ede-9d6e-1334dde72f00",
+                "name": "CPU1 - Mean Temperature",
+                "queries": [{
+                        "query": "select mean(\"value\") as \"mean_temperature\" from \"ipmi_sensor\" ",
+                        "groupbys": [],
+                        "wheres":  [ "\"name\" = 'cpu1_temp'" ]
+                                }]
+                        },
+{
+                "x": 0,
+                "y": 0,
+                "w": 4,
+                "h": 4,
+                "i": "8dbc4d35-500f-4ede-9d6e-1334dde72f01",
+                "name": "CPU - Mean Temperature",
+                "queries": [{
+                        "query": "select mean(\"value\") as \"mean_temperature\" from \"ipmi_sensor\" ",
+                        "groupbys": [],
+                        "wheres":  [ "\"name\" = 'cpu_temp'" ]
+                                }]
+                        },
+{
+                "x": 0,
+                "y": 0,
+                "w": 4,
+                "h": 4,
+                "i": "8dbc4d35-500f-4ede-9d6e-1334dde72f02",
+                "name": "System - Mean Temperature",
+                "queries": [{
+                        "query": "select mean(\"value\") as \"mean_temperature\" from \"ipmi_sensor\" ",
+                        "groupbys": [],
+                        "wheres":  [ "\"name\" = 'system_temp'" ]
+                                }]
+                        },
+{
+                "x": 0,
+                "y": 0,
+                "w": 4,
+                "h": 4,
+                "i": "8dbc4d35-500f-4ede-9d6e-1334dde72f03",
+                "name": "Peripheral - Mean Temperature",
+                "queries": [{
+                        "query": "select mean(\"value\") as \"mean_temperature\" from \"ipmi_sensor\" ",
+                        "groupbys": [],
+                        "wheres":  [ "\"name\" = 'pch_temp'" ]
+                                }]
+                        },
+{
+                "x": 0,
+                "y": 0,
+                "w": 4,
+                "h": 4,
+                "i": "8dbc4d35-500f-4ede-9d6e-1334dde72f04",
+                "name": "Power Supply 1 Status (O - OK, 1 - NOT_OK)",
+                "type": "single-stat",
+                "queries": [{
+                        "query": "select mean(\"value\") as \"status\" from \"ipmi_sensor\" ",
+                        "groupbys": [],
+                        "wheres":  [ "\"name\" = 'ps1_status'" ]
+                                }]
+                        },
+{
+                "x": 0,
+                "y": 0,
+                "w": 4,
+                "h": 4,
+                "i": "8dbc4d35-500f-4ede-9d6e-1334dde72f05",
+                "name": "Power Supply 2 Status (O - OK, 1 - NOT_OK)",
+                "type": "single-stat",
+		"queries": [{
+                        "query": "select mean(\"value\") as \"status\" from \"ipmi_sensor\" ",
+                        "groupbys": [],
+                        "wheres":  [ "\"name\" = 'ps2_status'" ]
+                                }]
+                        }
+	]
+}
