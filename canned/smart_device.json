@@ -1,7 +1,8 @@
 {
 	"id": "60cced2c-0b72-4d5c-b6a9-97866dfc352d",
-	"measurement": "smart",
+	"measurement": "smart_device",
 	"app": "smart",
+	"autoflow": true,
 			"cells": [
         {
 		"x": 0,
@@ -23,11 +24,11 @@
     "w": 4,
     "h": 4,
     "i": "5babff46-97a5-405d-a9e4-49a0660ef612",
-    "name": "SMART(All devices) - Health Status",
+    "name": "SMART(All devices) - Mean Temperature",
     "queries": [{
       "query": "select mean(\"temp_c\") from smart_device",
       "groupbys": [],
-      "wheres": []
+      "wheres": ["\"value\" != 0"]
     }]
 	},
     {
