@@ -56,34 +56,7 @@
                         "wheres":  [ "\"name\" = 'peripheral_temp'" ]
                                 }]
                         },
-{
-                "x": 0,
-                "y": 0,
-                "w": 4,
-                "h": 4,
-                "i": "8dbc4d35-500f-4ede-9d6e-1334dde72f04",
-                "name": "Power Supply Failures",
-                "type": "single-stat",
-                "queries": [{
-                        "query": "select max(\"value\") as \"status\" from \"ipmi_sensor\" ",
-                        "groupbys": [],
-                        "wheres":  [ "(\"name\" = 'ps1_status' OR \"name\" = 'ps2_status') " ]
-                                }]
-                        },
-{
-                "x": 0,
-                "y": 0,
-                "w": 4,
-                "h": 4,
-                "i": "8dbc4d35-500f-4ede-9d6e-1334dde72f05",
-                "name": "Chassis Intrusion Alerts",
-                "type": "single-stat",
-                "queries": [{
-                        "query": "select max(\"value\") as \"status\" from \"ipmi_sensor\" ",
-                        "groupbys": [],
-                        "wheres":  [ "(\"name\" = 'chassis_intru')"  ]
-                                }]
-                        },
+
 {
                 "x": 0,
                 "y": 0,
@@ -109,9 +82,34 @@
                         "groupbys": [],
                         "wheres":  [ "(\"name\"='dimma1_temp' OR \"name\"='dimma2_temp' OR \"name\"='dimmb1_temp' OR \"name\"='dimmb2_temp' OR \"name\"='dimmc1_temp' OR \"name\"='dimmc2_temp' OR \"name\"='dimmd1_temp' OR \"name\"='dimmd2_temp' OR \"name\"='p1-dimma1_temp' OR \"name\"='p1-dimma2_temp' OR \"name\"='p1-dimma3_temp' OR \"name\"='p1-dimmb1_temp' OR \"name\"='p1-dimmb2_temp' OR \"name\"='p1-dimmb3_temp' OR \"name\"='p1-dimmc1_temp' OR \"name\"='p1-dimmc2_temp' OR \"name\"='p1-dimmc3_temp' OR \"name\"='p1-dimmd1_temp' OR \"name\"='p1-dimmd2_temp' OR \"name\"='p1-dimmd3_temp' OR \"name\"='p2-dimme1_temp' OR \"name\"='p2-dimme2_temp' OR \"name\"='p2-dimme3_temp' OR \"name\"='p2-dimmf1_temp' OR \"name\"='p2-dimmf2_temp' OR \"name\"='p2-dimmf3_temp' OR \"name\"='p2-dimmg1_temp' OR \"name\"='p2-dimmg2_temp' OR \"name\"='p2-dimmg3_temp' OR \"name\"='p2-dimmh1_temp' OR \"name\"='p2-dimmh2_temp' OR \"name\"='p2-dimmh3_temp') AND \"value\" != 0 "  ]
                                 }]
-                        }
-
-
-
+                        },
+{
+                "x": 0,
+                "y": 0,
+                "w": 4,
+                "h": 4,
+                "i": "8dbc4d35-500f-4ede-9d6e-1334dde72f04",
+                "name": "Power Supply Failures",
+                "type": "single-stat",
+                "queries": [{
+                        "query": "select max(\"value\") as \"status\" from \"ipmi_sensor\" ",
+                        "groupbys": [],
+                        "wheres":  [ "(\"name\" = 'ps1_status' OR \"name\" = 'ps2_status') " ]
+                                }]
+                        },
+												{
+                "x": 0,
+                "y": 0,
+                "w": 4,
+                "h": 4,
+                "i": "8dbc4d35-500f-4ede-9d6e-1334dde72f05",
+                "name": "Chassis Intrusion Alerts",
+                "type": "single-stat",
+                "queries": [{
+                        "query": "select max(\"value\") as \"status\" from \"ipmi_sensor\" ",
+                        "groupbys": [],
+                        "wheres":  [ "(\"name\" = 'chassis_intru')"  ]
+                                }]
+															}
 	]
 }

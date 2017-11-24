@@ -1,0 +1,47 @@
+{
+	"id": "60cced2c-0b72-4d5c-b6a9-97866dfc352d",
+	"measurement": "smart",
+	"app": "smart",
+			"cells": [
+        {
+		"x": 0,
+		"y": 0,
+		"w": 4,
+		"h": 4,
+		"i": "5bfc1fbe-b8a0-4ca8-9b46-385999fb0c2d",
+		"name": "SMART(All devices) - Health Status",
+    "type": "single-stat",
+		"queries": [{
+			"query": "select last(\"health_ok\") from smart_device",
+			"groupbys": [],
+			"wheres": []
+    },
+    {
+    "x": 0,
+    "y": 0,
+    "w": 4,
+    "h": 4,
+    "i": "5babff46-97a5-405d-a9e4-49a0660ef612",
+    "name": "SMART(All devices) - Health Status",
+    "queries": [{
+      "query": "select mean(\"temp_c\") from smart_device",
+      "groupbys": [],
+      "wheres": []
+    },
+    {
+    "x": 0,
+    "y": 0,
+    "w": 4,
+    "h": 4,
+    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02093",
+    "name": "SMART(All devices) - CRC Errors",
+    "queries": [{
+      "query": "select mean(\"udma_crc_errors\") from smart_device",
+      "groupbys": [],
+      "wheres": []
+    },
+
+
+      ]
+			}]
+}
