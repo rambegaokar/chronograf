@@ -39,9 +39,7 @@
       "query": "select mean(\"udma_crc_errors\") from smart_device",
       "groupbys": [],
       "wheres": []
-    },
-
-
+    }
       ]
 			}]
 }
