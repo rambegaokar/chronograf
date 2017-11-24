@@ -44,5 +44,283 @@
       "wheres": []
     }
       ]
-			}]
+			},
+			{
+	    "x": 0,
+	    "y": 0,
+	    "w": 4,
+	    "h": 4,
+	    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02094",
+	    "name": "SMART(All devices) - Available Reservd Space",
+	    "queries": [{
+	      "query": "select mean(\"Available_Reservd_Space\") from smart_device",
+	      "groupbys": [],
+	      "wheres": []
+	    }]}
+			,
+			{
+	    "x": 0,
+	    "y": 0,
+	    "w": 4,
+	    "h": 4,
+	    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02095",
+	    "name": "SMART(All devices) - Current Pending Sector",
+	    "queries": [{
+	      "query": "select mean(\"Current_Pending_Sector\") from smart_device",
+	      "groupbys": [],
+	      "wheres": []
+	    }]}
+			,
+			{
+	    "x": 0,
+	    "y": 0,
+	    "w": 4,
+	    "h": 4,
+	    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02096",
+	    "name": "SMART(All devices) - End-to-End Error",
+	    "queries": [{
+	      "query": "select mean(\"End-to-End_Error\") from smart_device",
+	      "groupbys": [],
+	      "wheres": []
+	    }]}
+			,
+			{
+	    "x": 0,
+	    "y": 0,
+	    "w": 4,
+	    "h": 4,
+	    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02097",
+	    "name": "SMART(All devices) - Erase Fail Count",
+	    "queries": [{
+	      "query": "select mean(\"Erase_Fail_Count\") from smart_device",
+	      "groupbys": [],
+	      "wheres": []
+	    }]}
+			,
+			{
+	    "x": 0,
+	    "y": 0,
+	    "w": 4,
+	    "h": 4,
+	    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02098",
+	    "name": "SMART(All devices) - Mean Host Reads",
+	    "queries": [{
+	      "query": "select mean(\"Host_Reads_32MiB\") from smart_device",
+	      "groupbys": [],
+	      "wheres": []
+	    }]}
+			,
+			{
+	    "x": 0,
+	    "y": 0,
+	    "w": 4,
+	    "h": 4,
+	    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02099",
+	    "name": "SMART(All devices) - Mean Host Writes",
+	    "queries": [{
+	      "query": "select mean(\"Host_Writes_32MiB\") from smart_device",
+	      "groupbys": [],
+	      "wheres": []
+	    }]}
+			,
+			{
+	    "x": 0,
+	    "y": 0,
+	    "w": 4,
+	    "h": 4,
+	    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02084",
+	    "name": "SMART(All devices) - Media Wearout Indicator",
+	    "queries": [{
+	      "query": "select mean(\"Media_Wearout_Indicator\") from smart_device",
+	      "groupbys": [],
+	      "wheres": []
+	    }]}
+			,
+			{
+	    "x": 0,
+	    "y": 0,
+	    "w": 4,
+	    "h": 4,
+	    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02085",
+	    "name": "SMART(All devices) - Mean NAND Writes",
+	    "queries": [{
+	      "query": "select mean(\"NAND_Writes_32MiB\") from smart_device",
+	      "groupbys": [],
+	      "wheres": []
+	    }]}
+			,
+			{
+	    "x": 0,
+	    "y": 0,
+	    "w": 4,
+	    "h": 4,
+	    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02086",
+	    "name": "SMART(All devices) - Mean Power Cycle Count",
+	    "queries": [{
+	      "query": "select mean(\"Power_Cycle_Count\") from smart_device",
+	      "groupbys": [],
+	      "wheres": []
+	    }]}
+			,
+			{
+	    "x": 0,
+	    "y": 0,
+	    "w": 4,
+	    "h": 4,
+	    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02087",
+	    "name": "SMART(All devices) - Power Loss Cap Test",
+	    "queries": [{
+	      "query": "select mean(\"Power_Loss_Cap_Test\") from smart_device",
+	      "groupbys": [],
+	      "wheres": []
+	    }]}
+			,
+			{
+	    "x": 0,
+	    "y": 0,
+	    "w": 4,
+	    "h": 4,
+	    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02088",
+	    "name": "SMART(All devices) - Mean Power On (hours)",
+	    "queries": [{
+	      "query": "select mean(\"Power_On_Hours\") from smart_device",
+	      "groupbys": [],
+	      "wheres": []
+	    }]}
+			,
+			{
+	    "x": 0,
+	    "y": 0,
+	    "w": 4,
+	    "h": 4,
+	    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02089",
+	    "name": "SMART(All devices) - Mean Program Fail Count",
+	    "queries": [{
+	      "query": "select mean(\"Program_Fail_Count\") from smart_device",
+	      "groupbys": [],
+	      "wheres": []
+	    }]},
+			{
+	    "x": 0,
+	    "y": 0,
+	    "w": 4,
+	    "h": 4,
+	    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02074",
+	    "name": "SMART(All devices) - Mean Reallocated Sector Count",
+	    "queries": [{
+	      "query": "select mean(\"Reallocated_Sector_Ct\") from smart_device",
+	      "groupbys": [],
+	      "wheres": []
+	    }]},
+			{
+	    "x": 0,
+	    "y": 0,
+	    "w": 4,
+	    "h": 4,
+	    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02075",
+	    "name": "SMART(All devices) - Mean Reported Uncorrect",
+	    "queries": [{
+	      "query": "select mean(\"Reported_Uncorrect\") from smart_device",
+	      "groupbys": [],
+	      "wheres": []
+	    }]},
+			{
+	    "x": 0,
+	    "y": 0,
+	    "w": 4,
+	    "h": 4,
+	    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02076",
+	    "name": "SMART(All devices) - Mean SATA Downshift Count",
+	    "queries": [{
+	      "query": "select mean(\"SATA_Downshift_Count\") from smart_device",
+	      "groupbys": [],
+	      "wheres": []
+	    }]},
+			{
+	    "x": 0,
+	    "y": 0,
+	    "w": 4,
+	    "h": 4,
+	    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02077",
+	    "name": "SMART(All devices) - Mean Program Fail Count",
+	    "queries": [{
+	      "query": "select mean(\"Program_Fail_Count\") from smart_device",
+	      "groupbys": [],
+	      "wheres": []
+	    }]},
+			{
+	    "x": 0,
+	    "y": 0,
+	    "w": 4,
+	    "h": 4,
+	    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02078",
+	    "name": "SMART(All devices) - Mean Temperature Case",
+	    "queries": [{
+	      "query": "select mean(\"Temperature_Case\") from smart_device",
+	      "groupbys": [],
+	      "wheres": []
+	    }]},
+			{
+	    "x": 0,
+	    "y": 0,
+	    "w": 4,
+	    "h": 4,
+	    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02079",
+	    "name": "SMART(All devices) - Mean Temperature Internal",
+	    "queries": [{
+	      "query": "select mean(\"Temperature_Internal\") from smart_device",
+	      "groupbys": [],
+	      "wheres": []
+	    }]},
+			{
+	    "x": 0,
+	    "y": 0,
+	    "w": 4,
+	    "h": 4,
+	    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02064",
+	    "name": "SMART(All devices) - Mean Unsafe Shutdown Count",
+	    "queries": [{
+	      "query": "select mean(\"Unsafe_Shutdown_Count\") from smart_device",
+	      "groupbys": [],
+	      "wheres": []
+	    }]},
+			{
+	    "x": 0,
+	    "y": 0,
+	    "w": 4,
+	    "h": 4,
+	    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02064",
+	    "name": "SMART(All devices) - Mean Workld Host Reads Perc",
+	    "queries": [{
+	      "query": "select mean(\"Workld_Host_Reads_Perc\") from smart_device",
+	      "groupbys": [],
+	      "wheres": []
+	    }]},
+			{
+	    "x": 0,
+	    "y": 0,
+	    "w": 4,
+	    "h": 4,
+	    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02064",
+	    "name": "SMART(All devices) - Mean Workld Media Wear Indic",
+	    "queries": [{
+	      "query": "select mean(\"Workld_Media_Wear_Indic\") from smart_device",
+	      "groupbys": [],
+	      "wheres": []
+	    }]},
+			{
+	    "x": 0,
+	    "y": 0,
+	    "w": 4,
+	    "h": 4,
+	    "i": "2d647864-fc9b-4bdb-b2ca-99091fe02064",
+	    "name": "SMART(All devices) - Mean Workload Minutes",
+	    "queries": [{
+	      "query": "select mean(\"Workload_Minutes\") from smart_device",
+	      "groupbys": [],
+	      "wheres": []
+	    }
+	      ]
+				}
+		]
 }
