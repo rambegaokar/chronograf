@@ -15,7 +15,8 @@
 			"query": "select last(\"health_ok\") from smart_device",
 			"groupbys": [],
 			"wheres": []
-    },
+    }]
+	},
     {
     "x": 0,
     "y": 0,
@@ -27,7 +28,8 @@
       "query": "select mean(\"temp_c\") from smart_device",
       "groupbys": [],
       "wheres": []
-    },
+    }]
+	},
     {
     "x": 0,
     "y": 0,
