@@ -4,43 +4,17 @@
 	"app": "ipmi",
 	"autoflow":true,
 			"cells": [
-	{
-		"x": 0,
-		"y": 0,
-		"w": 4,
-		"h": 4,
-		"i": "8dbc4d35-500f-4ede-9d6e-1334dde72fcc",
-		"name": "CPU2 - Mean Temperature",
-		"queries": [{
-			"query": "select mean(\"value\") as \"mean_temperature\" from \"ipmi_sensor\" ",
-			"groupbys": [],
-			"wheres":  [ "\"name\" = 'cpu2_temp'" ]
-				}]
-			},
-	{
-                "x": 0,
-                "y": 0,
-                "w": 4,
-                "h": 4,
-                "i": "8dbc4d35-500f-4ede-9d6e-1334dde72f00",
-                "name": "CPU1 - Mean Temperature",
-                "queries": [{
-                        "query": "select mean(\"value\") as \"mean_temperature\" from \"ipmi_sensor\" ",
-                        "groupbys": [],
-                        "wheres":  [ "\"name\" = 'cpu1_temp'" ]
-                                }]
-                        },
 {
                 "x": 0,
                 "y": 0,
                 "w": 4,
                 "h": 4,
-                "i": "8dbc4d35-500f-4ede-9d6e-1334dde72f01",
+                "i": "8dbc4d35-500f-4ede-9d6e-1334dde72f06",
                 "name": "CPU - Mean Temperature",
                 "queries": [{
-                        "query": "select mean(\"value\") as \"mean_temperature\" from \"ipmi_sensor\" ",
+                        "query": "select mean(\"value\") as \"mean_cpu_temperature\" from \"ipmi_sensor\" ",
                         "groupbys": [],
-                        "wheres":  [ "\"name\" = 'cpu_temp'" ]
+                        "wheres":  [ "(\"name\" = 'cpu_temp' OR \"name\" = 'cpu1_temp' OR \"name\" = 'cpu2_temp')" ]
                                 }]
                         },
 {
@@ -51,7 +25,7 @@
                 "i": "8dbc4d35-500f-4ede-9d6e-1334dde72f02",
                 "name": "System - Mean Temperature",
                 "queries": [{
-                        "query": "select mean(\"value\") as \"mean_temperature\" from \"ipmi_sensor\" ",
+                        "query": "select mean(\"value\") as \"mean_system_temperature\" from \"ipmi_sensor\" ",
                         "groupbys": [],
                         "wheres":  [ "\"name\" = 'system_temp'" ]
                                 }]
@@ -62,9 +36,9 @@
                 "w": 4,
                 "h": 4,
                 "i": "8dbc4d35-500f-4ede-9d6e-1334dde72f03",
-                "name": "Peripheral - Mean Temperature",
+                "name": "PCH - Mean Temperature",
                 "queries": [{
-                        "query": "select mean(\"value\") as \"mean_temperature\" from \"ipmi_sensor\" ",
+                        "query": "select mean(\"value\") as \"mean_pch_temperature\" from \"ipmi_sensor\" ",
                         "groupbys": [],
                         "wheres":  [ "\"name\" = 'pch_temp'" ]
                                 }]
@@ -74,13 +48,26 @@
                 "y": 0,
                 "w": 4,
                 "h": 4,
+                "i": "b1923f3d-82dc-4efa-b8fb-c5f1c4d56b87",
+                "name": "Peripheral - Mean Temperature",
+                "queries": [{
+                        "query": "select mean(\"value\") as \"mean_peripheral_temperature\" from \"ipmi_sensor\" ",
+                        "groupbys": [],
+                        "wheres":  [ "\"name\" = 'peripheral_temp'" ]
+                                }]
+                        },
+{
+                "x": 0,
+                "y": 0,
+                "w": 4,
+                "h": 4,
                 "i": "8dbc4d35-500f-4ede-9d6e-1334dde72f04",
-                "name": "Power Supply 1 Status (O - OK, 1 - NOT_OK)",
+                "name": "Power Supply Failures",
                 "type": "single-stat",
                 "queries": [{
-                        "query": "select mean(\"value\") as \"status\" from \"ipmi_sensor\" ",
+                        "query": "select max(\"value\") as \"status\" from \"ipmi_sensor\" ",
                         "groupbys": [],
-                        "wheres":  [ "\"name\" = 'ps1_status'" ]
+                        "wheres":  [ "(\"name\" = 'ps1_status' OR \"name\" = 'ps2_status') " ]
                                 }]
                         },
 {
@@ -89,13 +76,42 @@
                 "w": 4,
                 "h": 4,
                 "i": "8dbc4d35-500f-4ede-9d6e-1334dde72f05",
-                "name": "Power Supply 2 Status (O - OK, 1 - NOT_OK)",
+                "name": "Chassis Intrusion Alerts",
                 "type": "single-stat",
-		"queries": [{
-                        "query": "select mean(\"value\") as \"status\" from \"ipmi_sensor\" ",
+                "queries": [{
+                        "query": "select max(\"value\") as \"status\" from \"ipmi_sensor\" ",
                         "groupbys": [],
-                        "wheres":  [ "\"name\" = 'ps2_status'" ]
+                        "wheres":  [ "(\"name\" = 'chassis_intru')"  ]
+                                }]
+                        },
+{
+                "x": 0,
+                "y": 0,
+                "w": 4,
+                "h": 4,
+                "i": "8dbc4d35-500f-4ede-9d6e-1334dde42f07",
+                "name": "Fan - Mean Speed",
+                "queries": [{
+                        "query": "select mean(\"value\") as \"mean_fan_speed\" from \"ipmi_sensor\" ",
+                        "groupbys": [],
+                        "wheres":  [ "(\"name\" = 'fan1' OR \"name\" = 'fan2' OR \"name\" = 'fan3' OR \"name\" = 'fan4' OR \"name\" = 'fan5' OR \"name\" = 'fan6' OR \"name\" = 'fan7' OR \"name\" = 'fan8' OR \"name\" = 'fan9')"  ]
+                                }]
+                        },
+{
+                "x": 0,
+                "y": 0,
+                "w": 4,
+                "h": 4,
+                "i": "31d35372-dce1-4214-83f2-e75d7f15f6f4",
+                "name": "Memory - Mean Temperature",
+                "queries": [{
+                        "query": "select mean(\"value\") as \"mean_memory_temperature\" from \"ipmi_sensor\" ",
+                        "groupbys": [],
+                        "wheres":  [ "(\"name\"='dimma1_temp' OR \"name\"='dimma2_temp' OR \"name\"='dimmb1_temp' OR \"name\"='dimmb2_temp' OR \"name\"='dimmc1_temp' OR \"name\"='dimmc2_temp' OR \"name\"='dimmd1_temp' OR \"name\"='dimmd2_temp' OR \"name\"='p1-dimma1_temp' OR \"name\"='p1-dimma2_temp' OR \"name\"='p1-dimma3_temp' OR \"name\"='p1-dimmb1_temp' OR \"name\"='p1-dimmb2_temp' OR \"name\"='p1-dimmb3_temp' OR \"name\"='p1-dimmc1_temp' OR \"name\"='p1-dimmc2_temp' OR \"name\"='p1-dimmc3_temp' OR \"name\"='p1-dimmd1_temp' OR \"name\"='p1-dimmd2_temp' OR \"name\"='p1-dimmd3_temp' OR \"name\"='p2-dimme1_temp' OR \"name\"='p2-dimme2_temp' OR \"name\"='p2-dimme3_temp' OR \"name\"='p2-dimmf1_temp' OR \"name\"='p2-dimmf2_temp' OR \"name\"='p2-dimmf3_temp' OR \"name\"='p2-dimmg1_temp' OR \"name\"='p2-dimmg2_temp' OR \"name\"='p2-dimmg3_temp' OR \"name\"='p2-dimmh1_temp' OR \"name\"='p2-dimmh2_temp' OR \"name\"='p2-dimmh3_temp') AND \"value\" != 0 "  ]
                                 }]
                         }
+
+
+
 	]
 }
